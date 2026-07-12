@@ -1,3 +1,11 @@
 import "./style.css";
 
-console.warn("start app", 3 + 5);
+function loadTeams() {
+  fetch("teams.json")
+    .then(r => r.json())
+    .then(teams => {
+      console.warn("teams?", teams);
+    });
+}
+
+loadTeams();
