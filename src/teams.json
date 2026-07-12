@@ -1,8 +1,14 @@
 [
   {
-    "promotion": "FastTrackIT",
+    "promotion": "Udemy",
     "members": "Matei Laurentiu",
     "Name": "Teams Networking",
+    "Url": "https://github.com/nmatei/teams-networking"
+  },
+  {
+    "promotion": "Personal",
+    "members": "Matei Laurentiu",
+    "Name": "Me",
     "Url": "https://github.com/nmatei/teams-networking"
   },
   {
@@ -12,15 +18,9 @@
     "Url": "https://github.com/nmatei/teams-networking"
   },
   {
-    "promotion": "FastTrackIT",
+    "promotion": "Brawl Stars",
     "members": "Matei Laurentiu",
-    "Name": "Teams Networking",
-    "Url": "https://github.com/nmatei/teams-networking"
-  },
-  {
-    "promotion": "FastTrackIT",
-    "members": "Matei Laurentiu",
-    "Name": "Teams Networking",
+    "Name": "Deepbip_",
     "Url": "https://github.com/nmatei/teams-networking"
   }
 ]
