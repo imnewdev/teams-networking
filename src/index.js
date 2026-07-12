@@ -1,1 +1,3 @@
-console.info("start app", 3 + 5);
+import "./style.css";
+
+console.warn("start app", 3 + 5);
