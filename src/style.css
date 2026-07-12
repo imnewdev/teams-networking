@@ -4,7 +4,7 @@ html {
 
 body {
   min-height: 100%;
-  margin: 0;
+  margin:;
   display: flex;
   flex-direction: column;
   background: #d2e8ea;
@@ -55,6 +55,16 @@ footer {
   color: white;
   text-align: center;
   padding: 7px;
+}
+.tbar {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.tfill {
+  flex: 1;
+  border: 1px solid red;
 }
 
 #teamsTable {
