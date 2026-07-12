@@ -2,12 +2,12 @@ import "./style.css";
 
 function getTeamAsHTML(team) {
   return `<tr>
-        <td>${team.promotion}</td>
-        <td>${team.members}</td>
-        <td>${team.Name}</td>
-        <td>${team.Url}</td>
-        <td>X</td>
-        </tr>`;
+            <td>${team.promotion}</td>
+            <td>${team.members}</td>
+            <td>${team.Name}</td>
+            <td>${team.Url}</td>
+            <td>X</td>
+          </tr>`;
 }
 
 function renderTeams(teams) {
@@ -17,7 +17,12 @@ function renderTeams(teams) {
 }
 
 function loadTeams() {
-  fetch("teams.json")
+  fetch("http://localhost:3000/teams-json", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
     .then(r => r.json())
     .then(teams => {
       renderTeams(teams);
