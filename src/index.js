@@ -4,8 +4,8 @@ function getTeamAsHTML(team) {
   return `<tr>
             <td>${team.promotion}</td>
             <td>${team.members}</td>
-            <td>${team.Name}</td>
-            <td>${team.Url}</td>
+            <td>${team.name}</td>
+            <td>${team.url}</td>
             <td>X</td>
           </tr>`;
 }
