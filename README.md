@@ -8,6 +8,10 @@ You can also find new project ideas.
 ## 🐧 Features & Usage
 
 - [x] teams Networking (CRUD\*) Operations
+  - [ ] **C**reate
+  - [ ] **R**ead
+  - [ ] **U**pdate
+  - [ ] **D**elete
 
 ## Start (daily usage)
 
