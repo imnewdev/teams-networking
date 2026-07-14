@@ -26,6 +26,10 @@ function loadTeams() {
     .then(r => r.json())
     .then(teams => {
       renderTeams(teams);
+    })
+    .catch(err => {
+      console.error("Error loading teams:", err);
+      alert("Failed to load teams. start node-api");
     });
 }
 

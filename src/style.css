@@ -84,3 +84,11 @@ footer {
 #teamsTable tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
+#teamsTable input {
+  width: 100%;
+}
+
+#teamsTable tfoot input:not([type="image"]) {
+  box-sizing: border-box;
+}
