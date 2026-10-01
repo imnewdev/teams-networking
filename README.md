@@ -18,6 +18,9 @@ You can also find new project ideas.
 ```sh
 cd C:/Products/node-api
 npm start
+
+# or shortcut
+npm run api
 ```
 
 start app (run in current project);

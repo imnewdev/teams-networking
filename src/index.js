@@ -1,5 +1,19 @@
 import "./style.css";
 
+function $(selector) {
+  return document.querySelector(selector);
+}
+
+function createTeamRequest(team) {
+  return fetch("http://localhost:3000/teams-json/create", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(team)
+  }).then(r => r.json());
+}
+
 function getTeamAsHTML(team) {
   return `<tr>
             <td>${team.promotion}</td>
@@ -13,11 +27,11 @@ function getTeamAsHTML(team) {
 function renderTeams(teams) {
   const teamsHTML = teams.map(getTeamAsHTML);
 
-  document.querySelector("#teamsTable tbody").innerHTML = teamsHTML.join("");
+  $("#teamsTable tbody").innerHTML = teamsHTML.join("");
 }
 
 function loadTeams() {
-  fetch("http://localhost:3000/teams-json", {
+  return fetch("http://localhost:3000/teams-json", {
     method: "GET",
     headers: {
       "Content-Type": "application/json"
@@ -33,4 +47,31 @@ function loadTeams() {
     });
 }
 
+function onSubmit(e) {
+  e.preventDefault();
+  const members = $("input[name=members]").value;
+  const promotion = $("#promotion").value;
+
+  const url = $("#url").value;
+  console.warn("url", url);
+  const team = {
+    promotion: $("input[name=promotion]").value,
+    members: members,
+    projectName: $("input[name=projectName]").value,
+    url
+  };
+
+  createTeamRequest(team).then(status => {
+    //console.warn("status", status);
+    if (status.success) {
+      window.location.reload();
+    }
+  });
+}
+
+function initEvents() {
+  $("#teamsForm").addEventListener("submit", onSubmit);
+}
+
+initEvents();
 loadTeams();
