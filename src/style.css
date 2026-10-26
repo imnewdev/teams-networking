@@ -90,8 +90,12 @@ footer {
   width: 100%;
 }
 
-#teamsTable tfoot input:not([type="image"]) {
+#teamsTable tfoot input:not([type="image" i]) {
   box-sizing: border-box;
+}
+
+.table-actions {
+  width: 85px;
 }
 
 .action-btn {
@@ -99,11 +103,16 @@ footer {
   min-width: 30px;
 }
 
+.edit-btn {
+  display: none;
+  color: #9653b5;
+}
+
 .delete-btn {
   display: none;
   color: #02638d;
 }
 
-#teamsTable tr:hover .delete-btn {
+#teamsTable tr:hover .action-btn {
   display: inline-block;
 }
